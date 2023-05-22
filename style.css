@@ -8,6 +8,14 @@
 html{
     scroll-behavior: smooth;
 }
+
+
+:root {
+    --purple-600:  #7c3aed;
+    --red-500: #c5232b;
+  }
+  
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -24,7 +32,7 @@ html{
     transition: all 0.3s ease;
 }
 .navbar.sticky{
-     background: #7c3aed;
+     background: var(--purple-600);
      padding: 15px 0;
 }
 .navbar .max-width{
@@ -38,7 +46,7 @@ html{
     font-weight: 500;
 }
 .navbar .logo a span{
-    color: #7c3aed;
+    color: var(--purple-600);
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
@@ -248,25 +256,39 @@ section .title::after{
 }
 .teams .carousel .card{
     background: #222;
-    border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
     transition: all 0.3s ease;
+    min-width: 320px;
+    min-height: 420px;
+    border-radius: 16px;
+
+
 }
 .teams .carousel .card:hover{
-    background: #7c3aed;
+    background-color: #7c3aed;
+    /*border-left: 4px solid #fff; */
 }
 .teams .carousel .card img{
-    width: 150px;
-    height: 150px;
+    width: 280px;
+    height: 280px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #7c3aed;
+    border-radius: 32px;
+ 
+    border: 4px solid #7c3aed;
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
     border-color: #fff;
 }
+
+
+.card-links{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .teams .carousel .card .box{
     display: flex;
     flex-direction: column;
@@ -284,9 +306,10 @@ section .title::after{
     background: #7c3aed;
     color: #fff;
     font-size: 20px;
-    padding: 12px 36px;
+    width: 100%;
+    padding: 8px 12px;
     margin-top: 20px;
-    border-radius: 6px;
+    border-radius: 16px;
     border: 2px solid #7c3aed;
 }
 .teams .box a:hover{
@@ -306,7 +329,7 @@ section .title::after{
 .owl-dot{
     width: 14px;
     height: 14px;
-    outline: none!important;
+    outline: none;
     border-radius: 50%;
     border: 2px solid #7c3aed!important;
     transition: all 0.3s ease;
